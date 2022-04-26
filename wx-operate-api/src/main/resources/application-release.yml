@@ -1,0 +1,24 @@
+server:
+  port: 13001
+springfox:
+  documentation:
+    enabled: true
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.17.0.7:3306/wx_hub?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false
+    username: root
+    password: 123456789
+    hikari:
+      max-lifetime: 120000
+  jpa:
+    database: mysql
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL5Dialect
+      ddl-auto: update
+      show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  main:
+    allow-bean-definition-overriding: true

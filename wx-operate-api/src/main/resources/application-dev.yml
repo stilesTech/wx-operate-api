@@ -1,0 +1,32 @@
+server:
+  port: 13001
+springfox:
+  documentation:
+    enabled: true
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/wx_hub?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&autoReconnect=true
+    username: root
+    password: 123456789
+    hikari:
+      max-lifetime=120000:
+  jpa:
+    hibernate:
+      #如果数据库中没有这个表 则根据entity直接创建
+      ddl-auto: update
+      show-sql: true
+  main:
+    allow-bean-definition-overriding: true
+
+#app:
+#  id: wx-operate-api
+#apollo:
+#  bootstrap:
+#    enabled: true
+#    #将Apollo配置加载提到初始化日志系统之前
+#    eagerLoad:
+#      enabled: true
+#    namespaces: application
+#  cluster: default
+#  cacheDir: /tmp/apollo-cache
